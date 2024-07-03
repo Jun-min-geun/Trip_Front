@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+
+import MainPage from "./Pages/MainPage/MainPage";
+import LoginPage from "./Pages/LoginPages/LoginPage";
+
 
 function App() {
+  const [showInsertPage, setShowInsertPage] = React.useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowInsertPage(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/Login" element={<LoginPage />} />
+          </Routes>
+        </BrowserRouter>
+      </>
   );
 }
 

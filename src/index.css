@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'MontserratTitle'; /* 사용할 폰트의 이름을 정의 */
+  src: url('./assets/Font/Montserrat-Bold.ttf'); /* 폰트 파일의 위치 */
+}
+
+@font-face {
+  font-family: 'MontserratSubTitle'; /* 사용할 폰트의 이름을 정의 */
+  src: url('./assets/Font/Montserrat-SemiBold.ttf'); /* 폰트 파일의 위치 */
+}
+
+@font-face {
+  font-family: 'Montserratregular'; /* 사용할 폰트의 이름을 정의 */
+  src: url('./assets/Font/Montserrat-Regular.ttf'); /* 폰트 파일의 위치 */
+}
